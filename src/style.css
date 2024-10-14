@@ -36,3 +36,23 @@ body {
   align-self: flex-end;
   margin-right: 2%;
 }
+
+.rojo {
+  color: red;
+}
+
+.negro {
+  color: black;
+}
+
+.valor-carta {
+  font-size: 10rem;
+}
+
+.palo-carta {
+  font-size: 10rem;
+}
+
+.rotado {
+  transform: rotate(180deg);
+}
