@@ -17,15 +17,15 @@ const pintar_valores = (valores_carta, number_container, color) => {
   const valor = getRandomElement(valores_carta);
   const valor_carta = document.createElement("h1");
   valor_carta.textContent = valor;
-  valor_carta.classList.add("valor-carta"); // Añadir clase
-  valor_carta.classList.add(color === "red" ? "rojo" : "negro"); // Añadir clase dependiendo del color
+  valor_carta.classList.add("valor-carta");
+  valor_carta.classList.add(color === "red" ? "rojo" : "negro");
   number_container.appendChild(valor_carta);
 };
 
 const pintar_palos = (palo, color, container, rotar = false) => {
   const palo_content = document.createElement("h1");
   palo_content.textContent = palo;
-  palo_content.classList.add("palo-carta", color === "red" ? "rojo" : "negro"); // Añadir clases
+  palo_content.classList.add("palo-carta", color === "red" ? "rojo" : "negro");
   if (rotar) {
     palo_content.classList.add("rotado");
   }
@@ -43,7 +43,7 @@ const inicializar_palos = (
     valor_obtenido === "♦" || valor_obtenido === "♥" ? "red" : "black";
   pintar_palos(valor_obtenido, color, palo1_container);
   pintar_palos(valor_obtenido, color, palo2_container, true);
-  pintar_valores(valores, number_container, color); // Pasar el color también aquí
+  pintar_valores(valores, number_container, color);
 };
 
 window.onload = () => {
